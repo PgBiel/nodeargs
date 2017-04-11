@@ -1,0 +1,26 @@
+{
+  "name": "nodeargs",
+  "version": "1.0.0",
+  "description": "Yet another node.js process arguments parser",
+  "main": "./lib/index.js",
+  "scripts": {
+
+  },
+  "types": "./types.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PgBiel/nodeargs.git"
+  },
+  "keywords": [
+    "node",
+    "args",
+    "arguments",
+    "process"
+  ],
+  "author": "PgBiel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/PgBiel/nodeargs/issues"
+  },
+  "homepage": "https://github.com/PgBiel/nodeargs#readme"
+}
