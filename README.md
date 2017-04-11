@@ -67,7 +67,24 @@ Next up, we have our options. To set one, use `setOptions` with a key value pair
 
 * **parseCache** -> Limit of the parsing cache (Default: 1).
 
+Let's add an option to our example script:
+```js
+const nodeargs = require("nodeargs");
+nodeargs.setArgs({ name: "name", type: "string", shortcut: "n" });
+nodeargs.setOption("caseSensitive", true)
+```
+
+Done, now arguments are case sensitive.
+
 Use `parseArgs()` to activate the argument parsing. Doing so will push to the `lastParsed` property of the module, or remove the first element of the array and push in case the cache limit defined at options is exceeded. It also returns the parsed arguments.
+
+```js
+const nodeargs = require("nodeargs");
+nodeargs.setArgs({ name: "name", type: "string", shortcut: "n" });
+nodeargs.setOption("caseSensitive", true)
+const parsed = nodeargs.parseArgs();
+```
+And now we can do stuff with our "parsed" variable! Yay!
 
 ## How 2 Contribute
 
