@@ -50,6 +50,7 @@ exports.setOptions = ->
 exports.parseArgs = ->
   parsedArgs = {}
   ignore = no
+  optionals = {}
   args.forEach((arg, i) ->
     if ignore then return ignore = no
     if arg.startsWith("--") or arg.startsWith "-"
@@ -114,8 +115,8 @@ exports.parseArgs = ->
       if (not valid) and options.strict then throw new TypeError replaceOptions 0, arg else return undefined
   )
   if latestParsed.length >= (if isNaN options.parseCache then 1 else options.parseCache)
-    latestParsed.pop()
-    latestParsed.unshift parsedArgs
+    latestParsed.shift()
+    latestParsed.push parsedArgs
   else
     latestParsed.push parsedArgs
   parsedArgs
