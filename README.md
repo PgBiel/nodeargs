@@ -76,7 +76,7 @@ nodeargs.setOption("caseSensitive", true)
 
 Done, now arguments are case sensitive.
 
-Use `parseArgs()` to activate the argument parsing. Doing so will push to the `lastParsed` property of the module, or remove the first element of the array and push in case the cache limit defined at options is exceeded. It also returns the parsed arguments.
+Use `parseArgs()` to activate the argument parsing. Doing so will push to the `latestParsed` property of the module, or remove the first element of the array and push in case the cache limit defined at options is exceeded. It also returns the parsed arguments.
 
 ```js
 const nodeargs = require("nodeargs");
