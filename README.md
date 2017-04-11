@@ -9,14 +9,16 @@ Yet another process argument parser for node.
 The export will always have a property named `args` and `rawArgs` which are, respectively, the raw arguments but without the node part and the raw arguments with the node part. And with node part I mean this part:
 
 ```sh
-node yourScript.js```
+node yourScript.js
+```
 
 ### Parsing arguments
 
 To make it load arguments, use the `setArgs` function. Let's create an example file:
 
 ```js
-const nodeargs = require("nodeargs");```
+const nodeargs = require("nodeargs");
+```
 (Note: Even though I'm using ES6 syntax here, this module also works in ES5 and some older versions)
 
 The `setArgs` takes an unlimited amount of objects that will "define" the arguments. Here are the possibilities:
@@ -38,10 +40,12 @@ The `setArgs` takes an unlimited amount of objects that will "define" the argume
     // one, then this argument will receive a default value depending on the type
   }
 ```
+
 so we can use...
 ```js
 const nodeargs = require("nodeargs");
-nodeargs.setArgs({ name: "name", type: "string", shortcut: "n" });```
+nodeargs.setArgs({ name: "name", type: "string", shortcut: "n" });
+```
 
 Next up, we have our options. To set one, use `setOptions` with a key value pair (`setOptions(key, value)`. Any amount of those are accepted, but if you miss the value then it's an error!). Here are the valid options:
 
