@@ -1,4 +1,4 @@
-declare namespace nodeargs {
+declare module "nodeargs" {
   export let args: string[];
   export let rawArgs: string[];
   export let latestParsed: parsedArg[];
